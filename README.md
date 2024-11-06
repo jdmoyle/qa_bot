@@ -17,22 +17,14 @@ Langchain
 OpenAI API key (you'll need this for the Langchain integration)
 Installation Steps
 1. Clone the Repository
-bash
-Copy code
 git clone https://github.com/your-repo/question-answering-bot.git
 cd question-answering-bot
 2. Set up a Virtual Environment
 Create and activate a virtual environment:
-
-bash
-Copy code
 python3 -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 3. Install Dependencies
 Install the required dependencies listed in the requirements.txt:
-
-bash
-Copy code
 pip install -r requirements.txt
 4. Set up OpenAI API Key
 Create an account on OpenAI and get an API key. Then, add the key to your Django settings (settings.py):
@@ -42,15 +34,9 @@ Copy code
 OPENAI_API_KEY = 'your-openai-api-key'
 5. Apply Migrations
 Run database migrations (if any models are used):
-
-bash
-Copy code
 python manage.py migrate
 6. Run the Development Server
 Start the Django development server:
-
-bash
-Copy code
 python manage.py runserver
 The API will now be available at http://localhost:8000/.
 
@@ -64,8 +50,6 @@ Request (form-data)
 questions (JSON file): A file containing a list of questions.
 document (PDF/JSON file): The document (either PDF or JSON format) with content based on which answers will be generated.
 Example Request for questions.json
-json
-Copy code
 {
   "What is Langchain?": "",
   "What does Langchain do?": "",
@@ -76,8 +60,6 @@ Upload a PDF file containing relevant content about Langchain.
 Response
 A JSON object with the answers for each question.
 Example Response:
-json
-Copy code
 {
   "answers": [
     {
@@ -115,8 +97,7 @@ Defines the URL patterns for accessing the API endpoints.
 
 Example Files for Testing
 Example questions.json
-json
-Copy code
+
 {
   "What is Langchain?": "",
   "What does Langchain do?": "",
@@ -127,7 +108,6 @@ A PDF document that contains relevant information about Langchain (or any other 
 Sample Input and Output
 Sample Input Request
 questions.json:
-json
 
 {
   "What is Langchain?": "",
@@ -136,8 +116,6 @@ json
 }
 document.pdf: A PDF file with relevant content (e.g., a document describing Langchain).
 Sample Output Response
-json
-
 
 {
   "answers": [
